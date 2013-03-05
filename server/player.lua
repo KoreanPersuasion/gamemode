@@ -219,6 +219,13 @@ function meta:ChangeTeam(t, force)
 		return false
 	end
 
+		vipteams = {TEAM_VIP}
+if table.HasValue( vipteams, t ) and !force and not self:IsAdmin() and not self:IsUserGroup("vip") then
+	GAMEMODE:Notify(self, 1, 4, "This is a VIP Job! Donate to become a VIP!")
+return
+end 
+
+	
 	self:SetDarkRPVar("agenda", nil)
 
 	if t ~= TEAM_CITIZEN and not self:ChangeAllowed(t) and not force then
