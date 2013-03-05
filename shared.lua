@@ -343,44 +343,19 @@ TEAM_MEDIC = AddExtraTeam("Medic", {
 	hasLicense = false
 })
 
-TEAM_COOK = AddExtraTeam("Cook", {
+TEAM_RAPE = AddExtraTeam("Rapist", {
 	color = Color(238, 99, 99, 255),
 	model = "models/player/mossman.mdl",
-	description = [[As a cook, it is your responsibility to feed the other members
-		of your city.
-		You can spawn a microwave and sell the food you make:
-		/Buymicrowave]],
-	weapons = {},
-	command = "cook",
-	max = 2,
+	description = [[TO BE ADDED]],
+	weapons = {"weapon_rape"},
+	command = "rape",
+	max = 1,
 	salary = 45,
 	admin = 0,
 	vote = false,
 	hasLicense = false
 })
 
-
-TEAM_MAYOR = AddExtraTeam("Dictator", {
-	color = Color(150, 20, 20, 255),
-	model = "models/player/breen.mdl",
-	description = [[The Mayor of the city creates laws to serve the greater good
-	of the people.
-	If you are the mayor you may create and accept warrants.
-	Type /wanted <name>  to warrant a player
-	Type /jailpos to set the Jail Position
-	Type /lockdown initiate a lockdown of the city.
-	Everyone must be inside during a lockdown.
-	The cops patrol the area
-	/unlockdown to end a lockdown]],
-	weapons = {},
-	command = "Dictator",
-	max = 1,
-	salary = 85,
-	admin = 0,
-	vote = true,
-	hasLicense = false
-	
-})
 
 	TEAM_HOBO = AddExtraTeam("Hobo", {
 	color = Color(80, 45, 0, 255),
@@ -393,7 +368,7 @@ TEAM_MAYOR = AddExtraTeam("Dictator", {
 		outside someone else's door]],
 	weapons = {"weapon_bugbait"},
 	command = "hobo",
-	max = 5,
+	max = 10,
 	salary = 0,
 	admin = 0,
 	vote = false,
