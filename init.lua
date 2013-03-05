@@ -202,3 +202,16 @@ function numpad.OnDown(ply, key, name, ent, ...)
 
 	return oldNumpadDown(ply, key, name, ent, ...)
 end
+
+function MayorDemote( victim, weapon, killer )
+    if victim:Team() == TEAM_MAYOR then
+        victim:ChangeTeam(TEAM_CITIZEN, true)
+        victim:ChatPrint("You died and you are now a regular citizen.")
+        for k, v in pairs (player.GetAll()) do
+            if v != victim then
+                v:PrintMessage( HUD_PRINTCENTER, "The mayor has died!" )
+            end
+        end
+    end
+end
+hook.Add( "PlayerDeath", "mayorDemote", MayorDemote )

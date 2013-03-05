@@ -1,6 +1,8 @@
 /*--------------------------------------------------------
-Default teams. If you make a team above the citizen team, people will spawn with that team!
+THISE FILE IS NOT COMPLETE. REASONS LISTED ABOVE EVERY JOB.
 --------------------------------------------------------*/
+
+	--Completed
 TEAM_CITIZEN = AddExtraTeam("Citizen", {
 	color = Color(20, 150, 20, 255),
 	model = {
@@ -31,6 +33,7 @@ TEAM_CITIZEN = AddExtraTeam("Citizen", {
 	hasLicense = false
 })
 
+		--Completed
 TEAM_POLICE = AddExtraTeam("Civil Protection", {
 	color = Color(25, 25, 170, 255),
 	model = "models/player/police.mdl",
@@ -47,6 +50,7 @@ TEAM_POLICE = AddExtraTeam("Civil Protection", {
 	hasLicense = true
 })
 
+		--Completed
 TEAM_CHIEF = AddExtraTeam("Civil Protection Chief", {
 	color = Color(20, 20, 255, 255),
 	model = "models/player/combine_soldier_prisonguard.mdl",
@@ -65,17 +69,15 @@ TEAM_CHIEF = AddExtraTeam("Civil Protection Chief", {
 	salary = 75,
 	admin = 0,
 	vote = true,
-	hasLicense = true,
-	NeedToChangeFrom = TEAM_POLICE
+	hasLicense = true
 })
 
+		--Completed
 TEAM_POLICE = AddExtraTeam("S.W.A.T", {
 	color = Color(25, 25, 170, 100),
 	model = "models/player/swat.mdl",
-	description = [[The protector of every citizen that lives in the city .
-		You have the power to arrest criminals and protect innocents.
-		Type /wanted <name> to alert the public to this criminal
-		OR go to tab and warrant someone by clicking the warrant button]],
+	description = [[You are the protector and the hand of the mayor. 
+					You listen to his orders and protect him at all costs.]],
 	weapons = {"arrest_stick", "unarrest_stick", "weapon_mp52", "stunstick", "door_ram"},
 	command = "swat",
 	max = 3,
@@ -85,6 +87,7 @@ TEAM_POLICE = AddExtraTeam("S.W.A.T", {
 	hasLicense = true
 })
 
+		--INCOMPLETE. (WEAPONS, NOT VIP.)
 TEAM_CO = AddExtraTeam("Covert Operatives", {
 	color = Color(0, 191, 255, 255),
 	model = "models/player/gasmask.mdl",
@@ -96,11 +99,11 @@ TEAM_CO = AddExtraTeam("Covert Operatives", {
 	salary = 75,
 	admin = 0,
 	vote = false,
-	hasLicense = true,
+	hasLicense = true
 	
 })
 
-
+		--Completed
 TEAM_MAYOR = AddExtraTeam("Mayor", {
 	color = Color(150, 20, 20, 255),
 	model = "models/player/breen.mdl",
@@ -122,11 +125,16 @@ TEAM_MAYOR = AddExtraTeam("Mayor", {
 	hasLicense = true
 })
 
+		--INCOMPLETE (COLOR)
 TEAM_WARDEN = AddExtraTeam("Warden", {
 	color = Color(25, 25, 112, 255),
 	model = "models/player/combine_soldier.mdl",
-	description = [[TO BE ADDED]],
-	weapons = {"arrest_stick", "unarrest_stick", "weapon_deagle2", "stunstick", "weapon_tazer"},
+	description = [[The overseer of all vistors and prisoners that enter the jail. 
+					If anyone wishes to speak to the mayor, they go through the warden. 
+					You spawn with an unarrest stick, stun stick, and arrest stick to keep 
+					the prisoners in line. 
+					You have a deagle for protection against raids.]],
+	weapons = {"arrest_stick", "unarrest_stick", "weapon_deagle2", "stunstick"},
 	command = "wardon",
 	max = 1,
 	salary = 100,
@@ -135,23 +143,40 @@ TEAM_WARDEN = AddExtraTeam("Warden", {
 	hasLicense = true
 })
 
+		--INCOMPLETE (COLOR, WEAPONS?, NOT VIP)
 TEAM_JUDGE = AddExtraTeam("Judge", {
 	color = Color(0, 0, 0, 255),
 	model = "models/player/soldier_stripped.mdl",
-	description = [[TO BE EDITED]],
+	description = [[The Chief Justice of the city. With your high paying salary 
+					and high authority, you are almost equal to the mayor. 
+					(you can't set laws though)
+					When a prisoner feels they have been wrongfully arrested they 
+					may speak to the judge for a fine of (no more than) $100
+					and a court room hearing may or may not occur.
+					For a court room hearing to be official you will need 
+					the Present Mayor, Judge, Warden, and CP chief. 
+					Citizens can join in and help turn the tide of the verdict. 
+					The Judge must be fair and just, not letting personal or emotional issues 
+					come in the way of your job]],
 	weapons = {},
 	command = "judge",
 	max = 1,
 	salary = 150,
 	admin = 0,
-	vote = false,
+	vote = true,
 	hasLicense = false
 })
 
+		--INCOMPLETE (COLOR, WEAPONS?, MODEL, SALARY)
 TEAM_RMOB = AddExtraTeam("Russian Mob boss", {
 	color = Color(255, 0, 0, 255),
 	model = "models/player/gman_high.mdl",
-	description = [[TO BE ADDED]],
+	description = [[The head authority of the Russian Mob. 
+					You give orders to the lesser Russian mob members, and set the agenda 
+					for what the Russian Mob will accomplish. 
+					Russian Mob believes in Anarachy and chaos to take down the government 
+					and their sworn enemies, the Italian Mob. 
+					 -Do not KOS the Italian Mob]],
 	weapons = {"weapon_fiveseven2"},
 	command = "rmobboss",
 	max = 1,
@@ -161,15 +186,19 @@ TEAM_RMOB = AddExtraTeam("Russian Mob boss", {
 	hasLicense = false,
 })
 
+		--INCOMPLETE (COLOR, WEAPONS, SALARY, MODEL, MAX?, VOTE?)
 TEAM_VIP = AddExtraTeam("Russian Gangster", {
 	color = Color(75, 75, 75, 255),
 	model = {
 		"models/humans/jacketntie/male_05.mdl",
 		"models/humans/jacketntie/male_07.mdl",
 		"models/humans/jacketntie/male_09.mdl"},
-	description = [[The lowest person of crime.
-		A gangster generally works for the Mobboss who runs the crime family.
-		The Mobboss sets your agenda and you follow it or you might be punished.]],
+	description = [[The Body of the Russian Mob. 
+					Commit petty crimes to through of the government, or band together 
+					with your allies to do large scale crimes. 
+					You take orders and obey your mob boss. 
+					The Italian Mob is your sworn enemy.
+					 -Do not KOS the Italian Mob]],
 	weapons = {},
 	command = "rgangster",
 	max = 3,
@@ -179,10 +208,12 @@ TEAM_VIP = AddExtraTeam("Russian Gangster", {
 	hasLicense = false
 })
 
+		--INCOMPLETE (COLOR, MODEL, MAX?, SALARY, NOT VIP)
 TEAM_REG = AddExtraTeam("Russian Elite Gangster", {
 	color = Color(75, 75, 75, 255),
 	model = "models/player/niko/niko_bellic/nik0.mdl",
-	description = [[More Weapons and shit]],
+	description = [[The Russian gangster that trained hard and recieves a gun when spawning.
+					Donate to recieve this job. ]],
 	weapons = {},
 	command = "regangster",
 	max = 2,
@@ -192,12 +223,15 @@ TEAM_REG = AddExtraTeam("Russian Elite Gangster", {
 	hasLicense = false
 })
 
+		--INCOMPLETE (COLOR, MODEL, SALARY)
 TEAM_IMOB = AddExtraTeam("The Italian Don", {
 	color = Color(25, 25, 25, 255),
 	model = "models/player/gman_high.mdl",
-	description = [[The Mobboss is the boss of the criminals in the city.
-		With his power he coordinates the gangsters and forms an efficent crime
-		organization.]],
+	description = [[the Leader of the Italian Mob. 
+					You commit organized crime with your fellow mobsters against 
+					the innonect of the city, the government, and your rivals the Russian Mob. 
+					You spawn with a petty pistol. 
+					-Do not KOS the Russian Mob.]],
 	weapons = {"weapon_fiveseven2"},
 	command = "imobboss",
 	max = 1,
@@ -207,6 +241,7 @@ TEAM_IMOB = AddExtraTeam("The Italian Don", {
 	hasLicense = false
 })
 
+		--INCOMPLETE (COLOR, MODEL, MAX?, SALARY, VOTE?)
 TEAM_IGANG = AddExtraTeam("Italian Gangster", {
 	color = Color(75, 75, 75, 255),
 	model = {
@@ -224,9 +259,10 @@ TEAM_IGANG = AddExtraTeam("Italian Gangster", {
 		"models/player/Group03/Male_07.mdl",
 		"models/player/Group03/Male_08.mdl",
 		"models/player/Group03/Male_09.mdl"},
-	description = [[The lowest person of crime.
-		A gangster generally works for the Mobboss who runs the crime family.
-		The Mobboss sets your agenda and you follow it or you might be punished.]],
+	description = [[ You are a man of crime. You take orders from your don, 
+					and sole objective in life is to overthrow the government and wipe out 
+					the Russian Mob. 
+					-Do not kos the Russian Mob]],
 	weapons = {},
 	command = "igangster",
 	max = 3,
@@ -236,6 +272,7 @@ TEAM_IGANG = AddExtraTeam("Italian Gangster", {
 	hasLicense = false
 })
 
+		--INCOMPLETE (COLOR, MAX?, MODEL, SALARY, VOTE? NOT VIP)
 TEAM_IEGANG = AddExtraTeam("Italian Elite Gangster", {
 	color = Color(75, 75, 75, 255),
 	model = {
@@ -253,24 +290,24 @@ TEAM_IEGANG = AddExtraTeam("Italian Elite Gangster", {
 		"models/player/Group03/Male_07.mdl",
 		"models/player/Group03/Male_08.mdl",
 		"models/player/Group03/Male_09.mdl"},
-	description = [[The lowest person of crime.
-		A gangster generally works for the Mobboss who runs the crime family.
-		The Mobboss sets your agenda and you follow it or you might be punished.]],
+	description = [[An Italian gangster who was not inducted into the life of 
+					crime, but rather born into it. You spawn with a weapon.
+					 Donate to receive this job. ]],
 	weapons = {},
 	command = "iegangster",
-	max = 3,
+	max = 1,
 	salary = 45,
 	admin = 0,
 	vote = false,
 
 })
 
+		--INCOMPLETE (COLOR, MAX?, SALARY, VOTE?)
 TEAM_GANG = AddExtraTeam("Gangster", {
 	color = Color(75, 75, 75, 255),
 	model = "models/player/artic.mdl",
-	description = [[The lowest person of crime.
-		A gangster generally works for the Mobboss who runs the crime family.
-		The Mobboss sets your agenda and you follow it or you might be punished.]],
+	description = [[Petty person of crime. No boss, no orders. 
+					Just do as you please. Mug the innocent and steal things.]],
 	weapons = {},
 	command = "gangster",
 	max = 3,
@@ -280,10 +317,27 @@ TEAM_GANG = AddExtraTeam("Gangster", {
 	hasLicense = false
 })
 
+		--INCOMPLETE (COLOR, WEAPONS INCOMPLETE, MAX?, SALARY, VOTE?)
+TEAM_THIEF = AddExtraTeam("Thief", {
+	color = Color(25, 25, 170, 255),
+	model = "models/player/arctic.mdl",
+	description = [[You spawn with a crowbar and a know how of breaking and entering. 
+	Steal things from the innocent]],
+	weapons = {"lockpick"},
+	command = "thief",
+	max = 1,
+	salary = 70,
+	admin = 0,
+	vote = true,
+	hasLicense = false
+})
+
+		--INCOMPLETE (EVERYTHING NEEDS REVIEW)
 TEAM_HM = AddExtraTeam("Hitman", {
 	color = Color(25, 25, 170, 255),
 	model = "models/player/guerilla.mdl",
-	description = [[hello world]],
+	description = [[You may take hits from other players to kill a person they want.
+					You must take 100$ per hit minimum and 200$ maximum.]],
 	weapons = {"weapon_knife"},
 	command = "hitman",
 	max = 1,
@@ -293,6 +347,7 @@ TEAM_HM = AddExtraTeam("Hitman", {
 	hasLicense = true
 })
 
+		--INCOMPLETE (NEEDS REVIEW, POSSIBLY SHIPMENT REVIEW AS WELL)
 TEAM_GUN = AddExtraTeam("Gun Dealer", {
 	color = Color(255, 140, 0, 255),
 	model = "models/player/monk.mdl",
@@ -311,11 +366,13 @@ TEAM_GUN = AddExtraTeam("Gun Dealer", {
 	hasLicense = false
 })
 
+		--INCOMPLETE (NEEDS REVIEW, POSSIBLY SHIPMENT REVIEW AS WELL)
 TEAM_BLACK = AddExtraTeam("Black Market Dealer", {
 	color = Color(160, 0, 145, 255),
 	model = "models/player/eli.mdl",
-	description = [[As BlackMarket
-	you sell illegal stuff'!]],
+	description = [[You sell different weapons and items than a gun dealer, 
+					but many of the items you sell are illegal.
+					Work in the shadows and never let a CP see you selling.]],
 	weapons = {},
 	command = "BlackMarket",
 	max = 2,
@@ -325,6 +382,7 @@ TEAM_BLACK = AddExtraTeam("Black Market Dealer", {
 	hasLicense = false
 })
 
+		--NEEDS REVIEW
 TEAM_MEDIC = AddExtraTeam("Medic", {
 	color = Color(47, 79, 79, 255),
 	model = "models/player/kleiner.mdl",
@@ -343,10 +401,15 @@ TEAM_MEDIC = AddExtraTeam("Medic", {
 	hasLicense = false
 })
 
+		--INCOMPLETE? (REVIEW COLOR, SALARY, MAX, MODEL? VIP?)
 TEAM_RAPE = AddExtraTeam("Rapist", {
 	color = Color(238, 99, 99, 255),
 	model = "models/player/mossman.mdl",
-	description = [[TO BE ADDED]],
+	description = [[You are eyes in the darkness when people think they are alone. 
+					You scout your prey walking on the streets, and when they 
+					walk down a dark alleyway, you suprise them with your love. 
+					Keep the rape in moderation.
+					-DO NOT PUBLIC RAPE. DO NOT SPAM RAPE]],
 	weapons = {"weapon_rape"},
 	command = "rape",
 	max = 1,
@@ -356,7 +419,7 @@ TEAM_RAPE = AddExtraTeam("Rapist", {
 	hasLicense = false
 })
 
-
+		--REVIEW
 	TEAM_HOBO = AddExtraTeam("Hobo", {
 	color = Color(80, 45, 0, 255),
 	model = "models/player/zombie_classic.mdl",
