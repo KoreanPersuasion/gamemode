@@ -219,7 +219,7 @@ function meta:ChangeTeam(t, force)
 		return false
 	end
 
-		vipteams = {TEAM_VIP}
+		vipteams = {TEAM_CO, TEAM_REG, TEAM_IEG, TEAM_RAPE, TEAM_JUDGE} 
 if table.HasValue( vipteams, t ) and !force and not self:IsAdmin() and not self:IsUserGroup("vip") then
 	GAMEMODE:Notify(self, 1, 4, "This is a VIP Job! Donate to become a VIP!")
 return

@@ -209,9 +209,22 @@ function MayorDemote( victim, weapon, killer )
         victim:ChatPrint("You died and you are now a regular citizen.")
         for k, v in pairs (player.GetAll()) do
             if v != victim then
-                v:PrintMessage( HUD_PRINTCENTER, "The mayor has died!" )
+                v:PrintMessage( HUD_PRINTCENTER, "The mayor has been assassinated!" )
             end
         end
     end
 end
 hook.Add( "PlayerDeath", "mayorDemote", MayorDemote )
+
+function JudgeDemote( victim, weapon, killer )
+    if victim:Team() == TEAM_JUDGE then
+        victim:ChangeTeam(TEAM_CITIZEN, true)
+        victim:ChatPrint("You died and you are now a regular citizen.")
+        for k, v in pairs (player.GetAll()) do
+            if v != victim then
+                v:PrintMessage( HUD_PRINTCENTER, "Evil has prevailed, The Judge has been murdered!" )
+            end
+        end
+    end
+end
+hook.Add( "PlayerDeath", "judgeDemote", JudgeDemote )
