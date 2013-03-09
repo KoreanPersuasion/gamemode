@@ -1,3 +1,8 @@
+/*--------------------------------------------------------
+
+--------------------------------------------------------*/
+
+
 AddCustomShipment("Desert eagle", {
 	model = "models/weapons/w_pist_deagle.mdl",
 	entity = "weapon_deagle2",

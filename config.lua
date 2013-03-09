@@ -74,7 +74,7 @@ GM.Config.earthquakes 					= false
 -- enablebuyhealth - Enable/disable buyhealth
 GM.Config.enablebuyhealth 				= true
 -- enablebuypistol - Turn /buy on of off.
-GM.Config.enablebuypistol 				= false
+GM.Config.enablebuypistol 				= true
 -- enablemayorsetsalary - Enable Mayor salary control.
 GM.Config.enablemayorsetsalary 			= false
 -- enableshipments - Turn /buyshipment on of off.
