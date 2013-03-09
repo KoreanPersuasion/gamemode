@@ -162,8 +162,14 @@ function FAdmin.Access.SetAccess(ply, cmd, args)
 		FAdmin.Access.SendGroups()
 	end
 
-	if not targets and string.find(args[1], "STEAM_") then
-		FAdmin.Access.PlayerSetGroup(args[1], args[2])
+	if not targets and (string.find(args[1], "STEAM_") or args[1] == "BOT") then
+		local target, groupname = args[1], args[2]
+		-- The console splits arguments on colons. Very annoying.
+		if args[1] == "STEAM_0" then
+			target = table.concat(args, "", 1, 5)
+			groupname = args[6]
+		end
+		FAdmin.Access.PlayerSetGroup(target, groupname)
 		FAdmin.Messages.SendMessage(ply, 4, "User access set!")
 		return
 	elseif not targets then
@@ -189,8 +195,8 @@ hook.Add("PlayerInitialSpawn", "FAdmin_SetAccess", function(ply)
 		if FAdmin.Access.Groups[Group] then
 			ply:FAdmin_SetGlobal("FAdmin_admin", FAdmin.Access.Groups[Group].ADMIN_ACCESS)
 		end
-		FAdmin.Access.SendGroups(ply)
 	end)
+	FAdmin.Access.SendGroups(ply)
 end)
 
 local function SetImmunity(ply, cmd, args)
