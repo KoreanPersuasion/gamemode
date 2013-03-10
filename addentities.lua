@@ -130,13 +130,12 @@ AddEntity("Money printer", {
 	cmd = "/buymoneyprinter"
 })
 
-AddEntity("Microwave", {
-	ent = "microwave",
-	model = "models/props/cs_office/microwave.mdl",
-	price = 400,
-	max = 1,
-	cmd = "/buymicrowave",
-	allowed = TEAM_COOK
+AddEntity("Storing Money printer", {
+	ent = "storing_money_printer",
+	model = "models/props_c17/consolebox01a.mdl",
+	price = 1000,
+	max = 2,
+	cmd = "/buymoneyprinter"
 })
 
 AddEntity("Gun lab", {

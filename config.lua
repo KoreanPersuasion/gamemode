@@ -241,3 +241,5 @@ GM.Config.wallettaxtime					= 600
 GM.Config.wantedtime					= 120
 -- walkspeed - Sets the max walking speed.
 GM.Config.walkspeed						= 160
+-- Storing Printer Amount
+GM.Config.storingamount 				= 1000
