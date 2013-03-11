@@ -23,7 +23,8 @@ TEAM_CITIZEN = AddExtraTeam("Citizen", {
 	},
 	description = [[The Citizen is the most basic level of society you can hold
 		besides being a hobo.
-		You have no specific role in city life. You may not raid or build as a citizen.]],
+		You have no specific role in city life. 
+		You may not raid or build as a citizen.]],
 	weapons = {},
 	command = "citizen",
 	max = 0,
@@ -40,8 +41,7 @@ TEAM_POLICE = AddExtraTeam("Civil Protection", {
 	description = [[The protector of every citizen that lives in the city .
 		You have the power to arrest criminals and protect innocents.
 		Type /wanted <name> to alert the public to this criminal
-		OR go to tab and warrant someone by clicking the warrant button
-		Use your door ram to break into houses of criminals and follow orders from your police chief.]],
+		OR go to tab and warrant someone by clicking the warrant button.]],
 	weapons = {"arrest_stick", "unarrest_stick", "weapon_glock2", "stunstick"},
 	command = "cp",
 	max = 5,
@@ -197,9 +197,20 @@ TEAM_RMOB = AddExtraTeam("Russian Mob boss", {
 TEAM_RG = AddExtraTeam("Russian Gangster", {
 	color = Color(255, 99, 71, 255),
 	model = {
-		"models/humans/jacketntie/male_05.mdl",
-		"models/humans/jacketntie/male_07.mdl",
-		"models/humans/jacketntie/male_09.mdl"},
+		"models/player/Group03/Female_01.mdl",
+		"models/player/Group03/Female_02.mdl",
+		"models/player/Group03/Female_03.mdl",
+		"models/player/Group03/Female_04.mdl",
+		"models/player/Group03/Female_06.mdl",
+		"models/player/group03/male_01.mdl",
+		"models/player/Group03/Male_02.mdl",
+		"models/player/Group03/male_03.mdl",
+		"models/player/Group03/Male_04.mdl",
+		"models/player/Group03/Male_05.mdl",
+		"models/player/Group03/Male_06.mdl",
+		"models/player/Group03/Male_07.mdl",
+		"models/player/Group03/Male_08.mdl",
+		"models/player/Group03/Male_09.mdl"},
 	description = [[The Body of the Russian Mob. 
 					Commit petty crimes to throw off the government, or band together 
 					with your allies to commit large scale crimes. 
@@ -218,11 +229,12 @@ TEAM_RG = AddExtraTeam("Russian Gangster", {
 		--INCOMPLETE (MODEL)
 TEAM_REG = AddExtraTeam("Russian Elite Gangster", {
 	color = Color(255, 99, 71, 255),
-	model = "models/player/niko/niko_bellic/nik0.mdl",
+	model = "models/player/phoenix.mdl",
 	description = [[The more intense and crazier of the Russian mob. Trained hard than regular gangsters.
-					Due to their superiority, they spawn with a powerful weapon to strengthen the russian mob
+					Due to their superiority, they spawn with a powerful weapon to 
+					strengthen the russian mob.
 					Donate to recieve this job. ]],
-	weapons = {},
+	weapons = {"weapon_ak472"},
 	command = "regangster",
 	max = 2,
 	salary = 45,
@@ -283,25 +295,11 @@ TEAM_IG = AddExtraTeam("Italian Gangster", {
 		--INCOMPLETE (MODEL)
 TEAM_IEG = AddExtraTeam("Italian Elite Gangster", {
 	color = Color(190, 190, 190, 255),
-	model = {
-		"models/player/Group03/Female_01.mdl",
-		"models/player/Group03/Female_02.mdl",
-		"models/player/Group03/Female_03.mdl",
-		"models/player/Group03/Female_04.mdl",
-		"models/player/Group03/Female_06.mdl",
-		"models/player/group03/male_01.mdl",
-		"models/player/Group03/Male_02.mdl",
-		"models/player/Group03/male_03.mdl",
-		"models/player/Group03/Male_04.mdl",
-		"models/player/Group03/Male_05.mdl",
-		"models/player/Group03/Male_06.mdl",
-		"models/player/Group03/Male_07.mdl",
-		"models/player/Group03/Male_08.mdl",
-		"models/player/Group03/Male_09.mdl"},
+	model = "models/player/phoenix.mdl",
 	description = [[An Italian gangster who was not inducted into the life of 
 					crime, but rather born into it. You spawn with a weapon because of your superiority.
 					 Donate to receive this job. ]],
-	weapons = {},
+	weapons = {"weapon_m42"},
 	command = "iegangster",
 	max = 2,
 	salary = 50,
@@ -313,7 +311,7 @@ TEAM_IEG = AddExtraTeam("Italian Elite Gangster", {
 		--INCOMPLETE (model)
 TEAM_GANG = AddExtraTeam("Gangster", {
 	color = Color(189, 183, 107, 255),
-	model = "models/player/artic.mdl",
+	model = "models/player/leet.mdl",
 	description = [[Petty person of crime. No boss, no orders. 
 					Just do as you please. Mug the innocent and steal things.]],
 	weapons = {},
@@ -337,6 +335,20 @@ TEAM_THIEF = AddExtraTeam("Thief", {
 	salary = 15,
 	admin = 0,
 	vote = false,
+	hasLicense = false
+})
+
+		--INCOMPLETE (model)
+TEAM_GUARD = AddExtraTeam("Gaurd", {
+	color = Color(212, 175, 55, 255),
+	model = "models/player/barney.mdl",
+	description = [[To be added.]],
+	weapons = {"stunstick"},
+	command = "gaurd",
+	max = 2,
+	salary = 50,
+	admin = 0,
+	vote = true,
 	hasLicense = false
 })
 
@@ -411,8 +423,8 @@ TEAM_MEDIC = AddExtraTeam("Medic", {
 })
 
 		--INCOMPLETE? (REVIEW COLOR, SALARY, MAX, MODEL?)
-TEAM_RAPE = AddExtraTeam("Rapist", {
-	color = Color(199, 21, 133, 255),
+TEAM_RAPE = AddExtraTeam("Citizen", {
+	color = Color(20, 150, 20, 255),
 	model = "models/player/mossman.mdl",
 	description = [[You are eyes in the darkness when people think they are alone. 
 					You scout your prey walking on the streets, and when they 
@@ -475,8 +487,8 @@ WARNING: THE DOOR GROUPS HAVE TO BE UNDER THE TEAMS IN SHARED.LUA. IF THEY ARE N
 
 The default door groups, can also be used as examples:
 */
-AddDoorGroup("Cops and Mayor only", TEAM_CHIEF, TEAM_POLICE, TEAM_MAYOR, TEAM_CO, TEAM_JUDGE, TEAM_WARDEN, TEAM_SWAT)
-AddDoorGroup("Gundealer only", TEAM_GUN)
+AddDoorGroup("Government officials", TEAM_CHIEF, TEAM_POLICE, TEAM_MAYOR, TEAM_CO, TEAM_JUDGE, TEAM_WARDEN, TEAM_SWAT)
+
 
 
 /*

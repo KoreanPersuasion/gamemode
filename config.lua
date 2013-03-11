@@ -86,7 +86,7 @@ GM.Config.globalshow 					= false
 -- ironshoot - Enable/disable whether people need iron sights to shoot.
 GM.Config.ironshoot 					= false
 -- showjob - Whether or not to display a player's job above their head in-game.
-GM.Config.showjob 						= false
+GM.Config.showjob 						= true
 -- letters - Enable/disable letter writing / typing.
 GM.Config.letters 						= true
 -- license - Enable/disable People need a license to be able to pick up guns
@@ -216,7 +216,7 @@ GM.Config.propcost						= 10
 -- quakechance - Chance of an earthquake happening.
 GM.Config.quakechance					= 4000
 -- respawntime - Minimum amount of seconds a player has to wait before respawning.
-GM.Config.respawntime					= 1
+GM.Config.respawntime					= 0
 -- runspeed - Sets the max running speed.
 GM.Config.runspeed						= 240
 -- searchtime - Number of seconds for which a search warrant is valid.
@@ -228,7 +228,7 @@ GM.Config.shipmentspawntime				= 10
 -- startinghealth - the health when you spawn.
 GM.Config.startinghealth				= 100
 -- startingmoney - your wallet when you join for the first time.
-GM.Config.startingmoney					= 500
+GM.Config.startingmoney					= 2000
 -- vehiclecost - Sets the cost of a vehicle (To own it).
 GM.Config.vehiclecost					= 40
 -- wallettaxmax - Maximum percentage of tax to be paid.
@@ -242,4 +242,7 @@ GM.Config.wantedtime					= 120
 -- walkspeed - Sets the max walking speed.
 GM.Config.walkspeed						= 160
 -- Storing Printer Amount
-GM.Config.storingamount 				= 1000
+GM.Config.bronzeamount					= 100
+GM.Config.silveramount					= 200
+GM.Config.goldamount					= 400
+GM.Config.diamondamount					= 1000

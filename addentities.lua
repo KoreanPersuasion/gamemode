@@ -122,22 +122,42 @@ AddEntity("Drug lab", {
 	allowed = {TEAM_GANG, TEAM_MOB}
 })
 
-AddEntity("Money printer", {
-	ent = "money_printer",
-	model = "models/props_c17/consolebox01a.mdl",
-	price = 1000,
-	max = 2,
-	cmd = "/buymoneyprinter"
+ AddEntity("Bronze Printer", {
+        ent = "bronze_printer",
+        model = "models/props_c17/consolebox01a.mdl",
+        price = 500,
+        max = 1,
+		cmd = "/buybronzeprinter"
+
 })
 
-AddEntity("Storing Money printer", {
-	ent = "storing_money_printer",
-	model = "models/props_c17/consolebox01a.mdl",
-	price = 1000,
-	max = 2,
-	cmd = "/buymoneyprinter"
+ AddEntity("Silver Printer", {
+        ent = "silver_printer",
+        model = "models/props_c17/consolebox01a.mdl",
+        price = 1000,
+        max = 1,
+		cmd = "/buysilverprinter"
+
 })
 
+ AddEntity("Gold Printer", {
+        ent = "gold_printer",
+        model = "models/props_c17/consolebox01a.mdl",
+        price = 2000,
+        max = 1,
+		cmd = "/buygoldprinter"
+
+})
+
+ AddEntity("Diamond Printer", {
+        ent = "diamond_printer",
+        model = "models/props_c17/consolebox01a.mdl",
+        price = 5000,
+        max = 1,
+		cmd = "/buydiamondprinter"
+
+})
+ 
 AddEntity("Gun lab", {
 	ent = "gunlab",
 	model = "models/props_c17/TrapPropeller_Engine.mdl",
