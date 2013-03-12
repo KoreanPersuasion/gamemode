@@ -8,7 +8,7 @@ GM.Config.voice3D						= true
 -- adminnpcs - Whether or not NPCs should be admin only.
 GM.Config.adminnpcs 					= true
 -- AdminsCopWeapons - Enable/disable admins spawning with cop weapons
-GM.Config.AdminsCopWeapons 				= true
+GM.Config.AdminsCopWeapons 				= false
 -- adminsents - Whether or not SENTs should be admin only.
 GM.Config.adminsents 					= true
 -- adminvehicles - Whether or not Vehicles should be admin only.
@@ -42,7 +42,7 @@ GM.Config.copscanunfreeze 				= false
 -- copscanunweld - Enable/disable the ability of cops to unweld other people's props
 GM.Config.copscanunweld 				= false
 -- cpcanarrestcp - Allow/Disallow CPs to arrest other CPs.
-GM.Config.cpcanarrestcp 				= false
+GM.Config.cpcanarrestcp 				= true
 -- customjobs - Enable/disable the /job command (personalized job names).
 GM.Config.customjobs 					= true
 -- customspawns - Enable/disable whether custom spawns should be used.
@@ -50,7 +50,7 @@ GM.Config.customspawns 					= true
 -- deathblack - Whether or not a player sees black on death.
 GM.Config.deathblack 					= false
 -- showdeaths - Display kill information in the upper right corner of everyone's screen.
-GM.Config.showdeaths 					= true
+GM.Config.showdeaths 					= false
 -- deathpov - Enable/disable whether people see their death in first person view
 GM.Config.deathpov 						= true
 -- decalcleaner - Enable/Disable clearing ever players decals.

@@ -329,7 +329,7 @@ TEAM_THIEF = AddExtraTeam("Thief", {
 	model = "models/player/arctic.mdl",
 	description = [[You spawn with a crowbar and a know how of breaking and entering. 
 					Steal things from the innocent]],
-	weapons = {"lockpick"},
+	weapons = {"lockpick", "keypad_cracker"},
 	command = "thief",
 	max = 3,
 	salary = 15,
@@ -487,7 +487,7 @@ WARNING: THE DOOR GROUPS HAVE TO BE UNDER THE TEAMS IN SHARED.LUA. IF THEY ARE N
 
 The default door groups, can also be used as examples:
 */
-AddDoorGroup("Government officials", TEAM_CHIEF, TEAM_POLICE, TEAM_MAYOR, TEAM_CO, TEAM_JUDGE, TEAM_WARDEN, TEAM_SWAT)
+AddDoorGroup("Government Officials", TEAM_CHIEF, TEAM_POLICE, TEAM_MAYOR, TEAM_CO, TEAM_JUDGE, TEAM_WARDEN, TEAM_SWAT)
 
 
 
