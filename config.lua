@@ -12,7 +12,7 @@ GM.Config.AdminsCopWeapons 				= false
 -- adminsents - Whether or not SENTs should be admin only.
 GM.Config.adminsents 					= true
 -- adminvehicles - Whether or not Vehicles should be admin only.
-GM.Config.adminvehicles 				= false
+GM.Config.adminvehicles 				= true
 -- advertisements - Enable/Disable chatprint advertisements.
 GM.Config.advertisements 				= true
 -- allow people getting their own custom jobs

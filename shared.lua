@@ -24,7 +24,9 @@ TEAM_CITIZEN = AddExtraTeam("Citizen", {
 	description = [[The Citizen is the most basic level of society you can hold
 		besides being a hobo.
 		You have no specific role in city life. 
-		You may not raid or build as a citizen.]],
+		You may not raid or build as a citizen.
+		Can Build: Yes
+		Can Raid: No]],
 	weapons = {},
 	command = "citizen",
 	max = 0,
@@ -41,7 +43,9 @@ TEAM_POLICE = AddExtraTeam("Civil Protection", {
 	description = [[The protector of every citizen that lives in the city .
 		You have the power to arrest criminals and protect innocents.
 		Type /wanted <name> to alert the public to this criminal
-		OR go to tab and warrant someone by clicking the warrant button.]],
+		OR go to tab and warrant someone by clicking the warrant button.
+		Can Build: No
+		Can Raid: Yes (with warrant)]],
 	weapons = {"arrest_stick", "unarrest_stick", "weapon_glock2", "stunstick"},
 	command = "cp",
 	max = 5,
@@ -63,7 +67,9 @@ TEAM_CHIEF = AddExtraTeam("Civil Protection Chief", {
 		disobey the law.
 		The Battering Ram can break down the door of a criminal with a
 		warrant for his/her arrest.
-		Type /wanted <name> to alert the public to this criminal]],
+		Type /wanted <name> to alert the public to this criminal
+		Can Build: No 
+		Can Raid: Yes (with warrant)]],
 	weapons = {"arrest_stick", "unarrest_stick", "weapon_deagle2", "stunstick", "weaponchecker"},
 	command = "chief",
 	max = 1,
@@ -82,7 +88,9 @@ TEAM_SWAT = AddExtraTeam("S.W.A.T", {
 	description = [[You are the protector and hands of the mayor. 
 					You listen to his orders and protect him at all costs.
 					When the Civil protection can't handle a job, the S.W.A.T are called in.
-					You have a door ram and equipped with an MP5 to put criminals in their place.]],
+					You have a door ram and equipped with an MP5 to put criminals in their place.
+					Can Build: No
+					Can Raid: Yes (with warrant)]],
 	weapons = {"arrest_stick", "unarrest_stick", "weapon_mp52", "stunstick", "door_ram"},
 	command = "swat",
 	max = 3,
@@ -96,8 +104,12 @@ TEAM_SWAT = AddExtraTeam("S.W.A.T", {
 TEAM_CO = AddExtraTeam("Covert Operatives", {
 	color = Color(0, 191, 255, 255),
 	model = "models/player/gasmask.mdl",
-	description = [[The most deadly of all the Police Force. Use you high powered weapons to complete jobs that CP and S.W.A.T. cannot.
-					Some may consider you a loose cannon, since you do not need to take orders from anyone expect for the mayor.]],
+	description = [[The most deadly of all the Police Force. 
+	Use you high powered weapons to complete jobs that CP and S.W.A.T. cannot.
+					Some may consider you a loose cannon, since you do not need 
+					to take orders from anyone expect for the mayor.
+					Can Build: No
+					Can Raid: Yes (with CP and a warrant)]],
 	weapons = {"arrest_stick", "unarrest_stick", "weapon_g36c", "weapon_knife", "stunstick", "door_ram"},
 	command = "CO",
 	max = 2,
@@ -121,7 +133,9 @@ TEAM_MAYOR = AddExtraTeam("Mayor", {
 	Type /lockdown initiate a lockdown of the city.
 	Everyone must be inside during a lockdown.
 	The cops patrol the area
-	/unlockdown to end a lockdown]],
+	/unlockdown to end a lockdown
+	Can Build: Yes (in the P.D. and Mayor office)
+	Can Raid: No]],
 	weapons = {},
 	command = "mayor",
 	max = 1,
@@ -146,7 +160,9 @@ TEAM_JUDGE = AddExtraTeam("Judge", {
 					the Present Mayor, Judge, Warden, and CP chief. 
 					Citizens can join in and help turn the tide of the verdict. 
 					The Judge must be fair and just, not letting personal or emotional issues 
-					come in the way of your job]],
+					come in the way of your job
+					Can Build: Yes (in P.D.)
+					Can Raid: No]],
 	weapons = {},
 	command = "judge",
 	max = 1,
@@ -164,7 +180,9 @@ TEAM_WARDEN = AddExtraTeam("Warden", {
 					If anyone wishes to speak to the mayor, they go through the warden. 
 					You spawn with an unarrest stick, stun stick, and arrest stick to keep 
 					the prisoners in line. 
-					You have a deagle for protection against raids.]],
+					You have a deagle for protection against raids.
+					Can Build: Yes (in P.D.)
+					Can Raid: No]],
 	weapons = {"arrest_stick", "unarrest_stick", "weapon_deagle2", "stunstick"},
 	command = "warden",
 	max = 1,
@@ -183,7 +201,9 @@ TEAM_RMOB = AddExtraTeam("Russian Mob boss", {
 					for what the Russian Mob will accomplish. 
 					Russian Mob believes in anarachy and chaos to take down the government 
 					and their sworn enemies, the Italian Mob. 
-					 -Do not KOS the Italian Mob]],
+					 -Do not KOS the Italian Mob
+					 Can Build: Yes
+					Can Raid: Yes,]],
 	weapons = {"weapon_fiveseven2"},
 	command = "rmobboss",
 	max = 1,
@@ -216,7 +236,9 @@ TEAM_RG = AddExtraTeam("Russian Gangster", {
 					with your allies to commit large scale crimes. 
 					You take orders and obey your mob boss. 
 					The Italian Mob is your sworn enemy.
-					 -Do not KOS the Italian Mob]],
+					 -Do not KOS the Italian Mob
+					 Can Build: Yes
+					Can Raid: Yes]],
 	weapons = {},
 	command = "rgangster",
 	max = 4,
@@ -233,7 +255,9 @@ TEAM_REG = AddExtraTeam("Russian Elite Gangster", {
 	description = [[The more intense and crazier of the Russian mob. Trained hard than regular gangsters.
 					Due to their superiority, they spawn with a powerful weapon to 
 					strengthen the russian mob.
-					Donate to recieve this job. ]],
+					Donate to recieve this job. 
+					Can Build: Yes
+					Can Raid: Yes]],
 	weapons = {"weapon_ak472"},
 	command = "regangster",
 	max = 2,
@@ -251,7 +275,9 @@ TEAM_IMOB = AddExtraTeam("The Italian Don", {
 					You commit organized crime with your fellow mobsters against 
 					the innonect of the city, the government, and your rivals the Russian Mob. 
 					You spawn with a petty pistol. 
-					-Do not KOS the Russian Mob.]],
+					-Do not KOS the Russian Mob.
+					Can Build: Yes
+					Can Raid: Yes]],
 	weapons = {"weapon_fiveseven2"},
 	command = "imobboss",
 	max = 1,
@@ -282,7 +308,9 @@ TEAM_IG = AddExtraTeam("Italian Gangster", {
 	description = [[ You are a man of crime. You take orders from your don, 
 					and sole objective in life is to overthrow the government and wipe out 
 					the Russian Mob. 
-					-Do not kos the Russian Mob]],
+					-Do not kos the Russian Mob
+					Can Build: Yes
+					Can Raid: Yes]],
 	weapons = {},
 	command = "igangster",
 	max = 4,
@@ -298,7 +326,9 @@ TEAM_IEG = AddExtraTeam("Italian Elite Gangster", {
 	model = "models/player/phoenix.mdl",
 	description = [[An Italian gangster who was not inducted into the life of 
 					crime, but rather born into it. You spawn with a weapon because of your superiority.
-					 Donate to receive this job. ]],
+					 Donate to receive this job. 
+					 Can Build: Yes
+					 Can Raid: Yes]],
 	weapons = {"weapon_m42"},
 	command = "iegangster",
 	max = 2,
@@ -313,7 +343,9 @@ TEAM_GANG = AddExtraTeam("Gangster", {
 	color = Color(189, 183, 107, 255),
 	model = "models/player/leet.mdl",
 	description = [[Petty person of crime. No boss, no orders. 
-					Just do as you please. Mug the innocent and steal things.]],
+					Just do as you please. Mug the innocent and steal things.
+					Can Build: Yes
+					Can Raid: Yes]],
 	weapons = {},
 	command = "gangster",
 	max = 3,
@@ -328,7 +360,9 @@ TEAM_THIEF = AddExtraTeam("Thief", {
 	color = Color(240, 230, 140, 255),
 	model = "models/player/arctic.mdl",
 	description = [[You spawn with a crowbar and a know how of breaking and entering. 
-					Steal things from the innocent]],
+					Steal things from the innocent
+					Can Build: Yes
+					Can Raid: Yes]],
 	weapons = {"lockpick", "keypad_cracker"},
 	command = "thief",
 	max = 3,
@@ -339,10 +373,13 @@ TEAM_THIEF = AddExtraTeam("Thief", {
 })
 
 		--INCOMPLETE (model)
-TEAM_GUARD = AddExtraTeam("Gaurd", {
+TEAM_GUARD = AddExtraTeam("Guard", {
 	color = Color(212, 175, 55, 255),
 	model = "models/player/barney.mdl",
-	description = [[To be added.]],
+	description = [[You are a guard for anything that needs protection.
+					A store or person may hire you and it becomes your job to protect the store
+					Can Build: No
+					Can Raid: Yes]],
 	weapons = {"stunstick"},
 	command = "gaurd",
 	max = 2,
@@ -358,7 +395,9 @@ TEAM_HM = AddExtraTeam("Hitman", {
 	model = "models/player/guerilla.mdl",
 	description = [[ You are a cold blooded assasin. You kill people for money and don't let personal ties get in the way.
 					You may take hits from other players to kill a person they want.
-					You must take 100$ per hit minimum and 200$ maximum.]],
+					You must take 100$ per hit minimum and 200$ maximum.
+					Can Build: Yes
+					Can Raid: No]],
 	weapons = {"weapon_knife"},
 	command = "hitman",
 	max = 1,
@@ -377,14 +416,16 @@ TEAM_GUN = AddExtraTeam("Gun Dealer", {
 		However, make sure you aren't caught selling guns that are illegal to
 		the public.
 		/Buyshipment <name> to Buy a  weapon shipment
-		/Buygunlab to Buy a gunlab that spawns P228 pistols]],
+		/Buygunlab to Buy a gunlab that spawns P228 pistols
+		Can Build: Yes 
+		Can Raid: No]],
 	weapons = {},
 	command = "gundealer",
 	max = 2,
 	salary = 45,
 	admin = 0,
 	vote = false,
-	hasLicense = false
+	hasLicense = true
 })
 
 		--INCOMPLETE (NEEDS REVIEW, POSSIBLY SHIPMENT REVIEW AS WELL)
@@ -393,7 +434,9 @@ TEAM_BLACK = AddExtraTeam("Black Market Dealer", {
 	model = "models/player/eli.mdl",
 	description = [[You sell different weapons and items than a gun dealer, 
 					but many of the items you sell are illegal.
-					Work in the shadows and never let a CP see you selling.]],
+					Work in the shadows and never let a CP see you selling.
+					Can Build: Yes
+					Can Raid: No]],
 	weapons = {},
 	command = "BlackMarket",
 	max = 2,
@@ -412,7 +455,9 @@ TEAM_MEDIC = AddExtraTeam("Medic", {
 		health.
 		Without a medic, people can not be healed.
 		Left click with the Medical Kit to heal other players.
-		Right click with the Medical Kit to heal yourself.]],
+		Right click with the Medical Kit to heal yourself.
+		Can Build: Yes
+		Can Raid: No]],
 	weapons = {"med_kit"},
 	command = "medic",
 	max = 3,
@@ -430,7 +475,9 @@ TEAM_RAPE = AddExtraTeam("Citizen", {
 					You scout your prey walking on the streets, and when they 
 					walk down a dark alleyway, you suprise them with your love. 
 					Keep the rape in moderation.
-					-DO NOT PUBLIC RAPE. DO NOT SPAM RAPE]],
+					-DO NOT PUBLIC RAPE. DO NOT SPAM RAPE
+					Can Build: No
+					Can Raid: No]],
 	weapons = {"weapon_rape"},
 	command = "rapist",
 	max = 1,
@@ -449,7 +496,9 @@ TEAM_RAPE = AddExtraTeam("Citizen", {
 		Beg for your food and money
 		Sing for everyone who passes to get money
 		Make your own wooden home somewhere in a corner or
-		outside someone else's door]],
+		outside someone else's door
+		Can Build: Yes (outside)
+		Can Raid: No]],
 	weapons = {"weapon_bugbait"},
 	command = "hobo",
 	max = 0,

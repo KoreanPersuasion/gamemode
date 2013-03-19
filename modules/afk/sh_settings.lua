@@ -1,2 +1,2 @@
-GM.Config.afkdemote = true
-GM.Config.afkdemotetime = 360
+GM.Config.afkdemote = false
+GM.Config.afkdemotetime = 0

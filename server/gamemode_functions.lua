@@ -521,8 +521,6 @@ function GM:PlayerInitialSpawn(ply)
 	ply.DarkRPVars = ply.DarkRPVars or {}
 	ply:NewData()
 	ply.SID = ply:UserID()
-	DB.RetrieveSalary(ply, function() end)
-	DB.RetrieveMoney(ply)
 
 	for k,v in pairs(ents.GetAll()) do
 		if IsValid(v) and v.deleteSteamID == ply:SteamID() and v.dt then
@@ -550,7 +548,8 @@ function meta:SetDarkRPVar(var, value, target)
 	self.DarkRPVars[var] = value
 
 	umsg.Start("DarkRP_PlayerVar", target)
-		umsg.Entity(self)
+	-- The index because the player handle might not exist clientside yet
+		umsg.Short(self:EntIndex())
 		umsg.String(var)
 		if value == nil then value = "nil" end
 		umsg.String(tostring(value))
@@ -559,7 +558,7 @@ end
 
 function meta:SetSelfDarkRPVar(var, value)
 	self.privateDRPVars = self.privateDRPVars or {}
-	table.insert(self.privateDRPVars, var)
+	self.privateDRPVars[var] = true
 
 	self:SetDarkRPVar(var, value, self)
 end
@@ -572,7 +571,7 @@ local function SendDarkRPVars(ply)
 	for k,v in pairs(player.GetAll()) do
 		sendtable[v] = {}
 		for a,b in pairs(v.DarkRPVars) do
-			if not table.HasValue(v.privateDRPVars or {}, a) or ply == v then
+			if not (v.privateDRPVars or {})[a] or ply == v then
 				sendtable[v][a] = b
 			end
 		end

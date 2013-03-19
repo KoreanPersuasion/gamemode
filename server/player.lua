@@ -79,18 +79,36 @@ function meta:SetRPName(name, firstRun)
 	end)
 end
 
+
 function meta:RestorePlayerData()
 	if not IsValid(self) then return end
 	DB.RetrievePlayerData(self, function(data)
 		if not IsValid(self) then return end
 
+		self.DarkRPUnInitialized = nil
+
 		local info = data and data[1] or {}
 		if not info.rpname or info.rpname == "NULL" then info.rpname = string.gsub(self:SteamName(), "\\\"", "\"") end
 
-		self:SetDarkRPVar("money", info.wallet or GAMEMODE.Config.startingmoney)
-		self:SetDarkRPVar("salary", info.salary or GAMEMODE.Config.normalsalary)
+		info.wallet = info.wallet or GAMEMODE.Config.startingmoney
+		info.salary = info.salary or GAMEMODE.Config.normalsalary
+
+		self:SetDarkRPVar("money", info.wallet)
+		self:SetDarkRPVar("salary", info.salary)
 
 		self:SetDarkRPVar("rpname", info.rpname)
+
+		if not data then
+			DB.CreatePlayerData(self, info.rpname, info.wallet, info.salary)
+		end
+	end, function() -- Retrieving data failed, go on without it
+		self.DarkRPUnInitialized = nil
+
+		self:SetDarkRPVar("money", GAMEMODE.Config.startingmoney)
+		self:SetDarkRPVar("salary", GAMEMODE.Config.normalsalary)
+		self:SetDarkRPVar(string.gsub(self:SteamName(), "\\\"", "\""))
+
+		ErrorNoHalt("Failed to retrieve player information")
 	end)
 end
 
